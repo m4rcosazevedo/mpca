@@ -1,0 +1,22 @@
+{
+  "name": "mpca",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b packages/*",
+    "changeset": "npx changeset",
+    "version-packages": "npx changeset version",
+    "publish-packages": "npx changeset publish",
+    "release": "npm run version-packages && npm run build && npm run publish-packages"
+  },
+  "keywords": [],
+  "author": "Marcos Azevedo",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "typescript": "^5.8.3"
+  }
+}

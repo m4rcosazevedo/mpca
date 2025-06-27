@@ -1,0 +1,6 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/string-helper" }
+  ]
+}
