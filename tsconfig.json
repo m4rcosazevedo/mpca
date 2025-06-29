@@ -1,6 +1,11 @@
 {
   "files": [],
   "references": [
-    { "path": "packages/string-helper" }
+    { "path": "packages/string-helper" },
+    { "path": "packages/permission-checker" },
+    { "path": "packages/storage" },
+    { "path": "packages/session" },
+    { "path": "packages/filter-params" },
+    { "path": "packages/date-helper" },
   ]
 }
