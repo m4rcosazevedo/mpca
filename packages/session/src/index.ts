@@ -2,7 +2,7 @@ type EncryptFn = (text: string) => string;
 type DecryptFn = (text: string) => string;
 type onErrorFn = () => void;
 
-export class Storage {
+export class Session {
   constructor(
     private readonly encrypt: EncryptFn,
     private readonly decrypt: DecryptFn,
@@ -15,14 +15,14 @@ export class Storage {
   ): void {
     if (value) {
       const data = JSON.stringify(value);
-      localStorage.setItem(key, this.encrypt(data));
+      sessionStorage.setItem(key, this.encrypt(data));
     } else {
-      localStorage.removeItem(key);
+      sessionStorage.removeItem(key);
     }
   }
 
   get<T = unknown>(key: string): T | null {
-    const value = localStorage.getItem(key);
+    const value = sessionStorage.getItem(key);
 
     try {
       return value ? JSON.parse(this.decrypt(value)) : null;
@@ -35,10 +35,10 @@ export class Storage {
   }
 
   remove(key: string): void {
-    localStorage.removeItem(key);
+    sessionStorage.removeItem(key);
   }
 
   clear(): void {
-    localStorage.clear();
+    sessionStorage.clear();
   }
 }
