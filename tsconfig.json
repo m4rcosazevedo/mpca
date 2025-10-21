@@ -7,5 +7,6 @@
     { "path": "packages/session" },
     { "path": "packages/filter-params" },
     { "path": "packages/date-helper" },
+    { "path": "packages/pipeline" },
   ]
 }
