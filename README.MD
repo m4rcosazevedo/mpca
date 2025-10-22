@@ -1,5 +1,10 @@
 # 
 
+## ✅ Primeira vez que for publicar o pacote, rode o comando na raiz
+```bash
+npm run build
+```
+
 ## ✅ Primeira publicação de cada pacote
 Na primeira vez que publicar cada pacote, vá em cada pasta e rode:
 
